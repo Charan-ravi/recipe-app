@@ -6,6 +6,7 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { CommonModule } from '@angular/common';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { CommonModule } from '@angular/common';
     RecipeListComponent,
     RecipesComponent,
     ShoppingListComponent,
-    CommonModule
+    CommonModule,
+    DropdownDirective
   ],
 })
 export class AppComponent {
