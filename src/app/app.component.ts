@@ -5,14 +5,25 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  standalone:true,
+  standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports:[HeaderComponent,RecipeListComponent,RecipesComponent,ShoppingListComponent]
+  imports: [
+    HeaderComponent,
+    RecipeListComponent,
+    RecipesComponent,
+    ShoppingListComponent,
+    CommonModule
+  ],
 })
 export class AppComponent {
   title = 'recipe-app';
+  loadedFeature = 'recipe';
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
